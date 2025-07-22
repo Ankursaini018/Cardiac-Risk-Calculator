@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Cardiovascular Risk Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="/static/3d-style.css" rel="stylesheet">
+</head>
+<body>
+<header class="bg-primary text-white py-3 mb-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <h1 class="h3 mb-0 text-dark d-flex align-items-center">
+            <span class="me-2" style="font-size:2.2rem; color:#e63946;"><i class="bi bi-heart-pulse-fill"></i></span>
+            Cardiac Risk Calculator
+        </h1>
+        <nav>
+            <a href="/" class="text-dark me-3" title="Home" data-bs-toggle="tooltip"><i class="bi bi-house" style="font-size: 1.7rem;"></i></a>
+            <a href="/history" class="text-dark me-3" title="History" data-bs-toggle="tooltip"><i class="bi bi-clock-history" style="font-size: 1.7rem;"></i></a>
+        </nav>
+    </div>
+</header>
+<main class="container fade-in-up">
+    <h2 class="mb-4">History</h2>
+    {% if history and history|length > 0 %}
+    <div class="table-responsive fade-in-up">
+        <table class="table table-bordered table-striped align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Blood Pressure</th>
+                    <th>Cholesterol</th>
+                    <th>Diabetes</th>
+                    <th>Smoking</th>
+                    <th>Chest Pain</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in history %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ entry.inputs['Gender'] }}</td>
+                    <td>{{ entry.inputs['Age'] }}</td>
+                    <td>{{ entry.inputs['Blood Pressure (mmHg)'] }}</td>
+                    <td>{{ entry.inputs['Cholesterol (mg/dL)'] }}</td>
+                    <td>{{ entry.inputs['Has Diabetes'] }}</td>
+                    <td>{{ entry.inputs['Smoking Status'] }}</td>
+                    <td>{{ entry.inputs['Chest Pain Type'] }}</td>
+                    <td><span class="fw-bold">{{ entry.result }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="alert alert-info fade-in-up">No prediction history yet. Use the calculator to get started!</div>
+    {% endif %}
+</main>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div>Contact us:
+        <a href="https://instagram.com/yourprofile" class="text-white ms-3" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+        <a href="https://wa.me/yourwhatsappnumber" class="text-white ms-3" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+1234567890" class="text-white ms-3"><i class="bi bi-telephone"></i> Phone</a>
+        <a href="mailto:youremail@example.com" class="text-white ms-3"><i class="bi bi-envelope"></i> Email</a>
+    </div>
+    <div class="mt-2 small">&copy; 2024 Heart Attack Risk Calculator. All rights reserved.</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

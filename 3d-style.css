@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header, footer {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 1.5px 4px rgba(0,0,0,0.10);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 24px 24px;
+}
+
+main, .container, .bg-light, .alert, section {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+    border-radius: 18px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+}
+
+section.bg-light {
+    background: rgba(240,248,255,0.85);
+}
+
+.card, .alert, .form-control, .form-select {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+.btn {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s, background 0.18s, color 0.18s;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary, .btn-lg {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+    color: #fff;
+}
+
+.btn:active {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    color: #fff;
+}
+
+img.img-fluid, .rounded, .shadow {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border-radius: 18px;
+}
+
+nav a {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+footer {
+    border-radius: 24px 24px 0 0;
+    margin-top: 48px;
+}
+
+/* Glassmorphism for forms */
+form {
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 18px;
+    padding: 24px;
+    backdrop-filter: blur(8px);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(.4,2,.6,1) both;
+}
+
+main, section, .card, .alert, .img-fluid, .list-group-item, .btn, .shadow {
+    transition: box-shadow 0.3s, transform 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
+}
+
+.card:hover, .alert:hover, .list-group-item:hover, .shadow:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 16px 48px rgba(78,84,200,0.18), 0 4px 16px rgba(0,0,0,0.10);
+    z-index: 2;
+}
+
+.img-fluid.fade-in-up {
+    animation-delay: 0.2s;
+}
+
+.btn.fade-in-up {
+    animation-delay: 0.3s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    50% { transform: scale(1.08); box-shadow: 0 12px 32px rgba(78,84,200,0.18); }
+    100% { transform: scale(1); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+}
+
+.pulse-on-hover:hover, .pulse-on-hover:focus {
+    animation: pulse 0.8s infinite cubic-bezier(.4,2,.6,1);
+} 

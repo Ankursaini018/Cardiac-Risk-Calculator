@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Risk Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="/static/3d-style.css" rel="stylesheet">
+</head>
+<body>
+<header class="bg-primary text-white py-3 mb-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <h1 class="h3 mb-0 text-dark d-flex align-items-center">
+            <span class="me-2" style="font-size:2.2rem; color:#e63946;"><i class="bi bi-heart-pulse-fill"></i></span>
+            Cardiac Risk Calculator
+        </h1>
+        <nav>
+            <a href="/" class="text-dark me-3" title="Home" data-bs-toggle="tooltip"><i class="bi bi-house" style="font-size: 1.7rem;"></i></a>
+            <a href="/history" class="text-dark me-3" title="History" data-bs-toggle="tooltip"><i class="bi bi-clock-history" style="font-size: 1.7rem;"></i></a>
+        </nav>
+    </div>
+</header>
+<main class="container fade-in-up">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <img src="/static/heart.jpg" alt="Heart Health" class="img-fluid rounded shadow w-100" style="max-height:350px; object-fit:cover;">
+        </div>
+    </div>
+    <div class="row align-items-center mb-5 fade-in-up">
+        <div class="col-md-7 fade-in-up">
+            <h2 class="mb-3">Welcome to the Heart Attack Risk Calculator</h2>
+            <p class="lead">This tool helps you estimate your risk of developing cardiovascular disease based on established risk factors. Use the calculator to better understand your health and discuss your results with your healthcare provider.</p>
+            <!-- Removed the Start Risk Assessment button from here -->
+        </div>
+        <!-- Removed the old image column -->
+    </div>
+    <div class="text-center my-5 fade-in-up">
+        <h2 class="mb-4">Risk Factors for Heart Attack</h2>
+        <img src="/static/factors.jpg" alt="Risk Factors for Heart Attack" class="img-fluid rounded shadow w-100 fade-in-up" style="max-width:700px; object-fit:contain;">
+        <div class="row justify-content-center mt-4 fade-in-up">
+            <div class="col-md-10 fade-in-up">
+                <ul class="list-group list-group-flush text-start fs-5">
+                    <li class="list-group-item bg-transparent"><strong>Smoking:</strong> Damages blood vessels and increases blood pressure, raising heart attack risk.</li>
+                    <li class="list-group-item bg-transparent"><strong>Genetics:</strong> Family history of heart disease can increase your risk.</li>
+                    <li class="list-group-item bg-transparent"><strong>Age:</strong> Risk increases as you get older, especially after age 45 for men and 55 for women.</li>
+                    <li class="list-group-item bg-transparent"><strong>Alcohol:</strong> Excessive drinking can raise blood pressure and cholesterol levels.</li>
+                    <li class="list-group-item bg-transparent"><strong>Unhealthy Food:</strong> Diets high in saturated fat, salt, and sugar contribute to heart disease.</li>
+                    <li class="list-group-item bg-transparent"><strong>High Cholesterol:</strong> Leads to plaque buildup in arteries, restricting blood flow to the heart.</li>
+                    <li class="list-group-item bg-transparent"><strong>Stress:</strong> Chronic stress may damage arteries and worsen other risk factors.</li>
+                    <li class="list-group-item bg-transparent"><strong>Diabetes:</strong> High blood sugar damages blood vessels and nerves controlling the heart.</li>
+                    <li class="list-group-item bg-transparent"><strong>Obesity:</strong> Increases the risk of high blood pressure, diabetes, and high cholesterol.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="bg-light p-5 rounded mb-5 fade-in-up">
+        <div class="text-center mb-4">
+            <button class="btn btn-primary btn-lg shadow fade-in-up" style="font-size:2rem; border-radius: 2rem; padding: 0.75em 2em; box-shadow: 0 8px 32px rgba(0,0,0,0.18);">About This Calculator</button>
+        </div>
+        <p class="fs-4">The Heart Attack Risk Calculator is designed to help healthcare professionals and individuals estimate the risk of developing cardiovascular disease based on established risk factors. The tool is based on widely accepted medical guidelines and is intended for educational and informational purposes only.</p>
+        <h4>Who Should Use This Tool?</h4>
+        <ul class="fs-5">
+            <li>Healthcare professionals for patient education and risk assessment</li>
+            <li>Individuals interested in understanding their cardiovascular risk</li>
+        </ul>
+    </section>
+    <!-- Learn More button removed -->
+    <section class="bg-light p-5 rounded mb-5 fade-in-up">
+        <h2 class="mb-4 text-center">Factors Used to Calculate Heart Risk</h2>
+        <div class="text-center mb-4">
+            <img src="/static/hhhhhhhhhhhhhhhh.jpg" alt="Heart Risk Factors" class="img-fluid rounded shadow w-100 fade-in-up" style="max-width:600px; object-fit:contain;">
+        </div>
+        <h3 class="mb-3">What is a Cardiac Risk Calculator?</h3>
+        <p>A cardiac risk calculator is a screening tool that estimates your risk of future cardiovascular disease. It uses your personal health information to calculate a 10-year and lifelong risk of heart disease. The risk score can help you and your healthcare provider make lifestyle changes or take medicines to prevent heart disease.</p>
+        <h4 class="mt-4">What Information Does It Use?</h4>
+        <ul class="fs-5">
+            <li>Age, sex, and race</li>
+            <li>Blood pressure and use of medications</li>
+            <li>Cholesterol levels and use of statins</li>
+            <li>Diabetes status</li>
+            <li>Family history of heart attacks or heart disease</li>
+            <li>Smoking history</li>
+        </ul>
+        <h4 class="mt-4">How is Risk Calculated?</h4>
+        <p>Cardiac risk calculators give a heart disease risk score as a percentage. The lower the percentage, the lower your chances of developing heart disease in the next 10 years. The higher the percentage, the greater your chances of significant heart problems now and in the future.</p>
+        <ul class="fs-5">
+            <li><strong>Low:</strong> Less than a 5% risk</li>
+            <li><strong>Borderline:</strong> 5% to 7.4% risk</li>
+            <li><strong>Intermediate:</strong> 7.5% to 19.9% risk</li>
+            <li><strong>High:</strong> More than a 20% risk</li>
+        </ul>
+        <h4 class="mt-4">Risk Factors</h4>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow fade-in-up">
+                    <div class="card-header bg-secondary text-white">Things you can't change</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Age</li>
+                            <li>Family history of cardiovascular disease</li>
+                            <li>Previous history of cardiovascular disease</li>
+                            <li>Sex</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow fade-in-up">
+                    <div class="card-header bg-success text-white">Things you can change</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Blood pressure</li>
+                            <li>Blood sugar/diabetes</li>
+                            <li>BMI</li>
+                            <li>Chronic inflammation</li>
+                            <li>Diet</li>
+                            <li>Exercise</li>
+                            <li>HDL cholesterol</li>
+                            <li>Smoking</li>
+                            <li>Stress</li>
+                            <li>Total cholesterol</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow fade-in-up">
+                    <div class="card-header bg-warning text-dark">Social factors</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Environment</li>
+                            <li>Income</li>
+                            <li>Social isolation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4 class="mt-5">How Can I Improve My Heart Disease Risk Score?</h4>
+        <ul class="fs-5">
+            <li>Eat a heart-healthy diet</li>
+            <li>Get regular aerobic exercise (at least 150 minutes per week)</li>
+            <li>Limit alcohol consumption</li>
+            <li>Lose weight (if needed) and maintain a healthy weight</li>
+            <li>Find healthy ways to manage stress</li>
+            <li>Get help to quit smoking and avoid secondhand smoke</li>
+            <li>Manage conditions like high blood pressure, diabetes, and high cholesterol</li>
+        </ul>
+    </section>
+    <div class="text-center my-5 fade-in-up">
+        <a href="/project" class="btn btn-danger btn-lg pulse-on-hover" style="font-size:1.5rem; padding: 0.75em 2.5em; border-radius: 2em;">Start Risk Assessment</a>
+    </div>
+</main>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div>Contact us:
+        <a href="https://instagram.com/yourprofile" class="text-white ms-3" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+        <a href="https://wa.me/yourwhatsappnumber" class="text-white ms-3" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+1234567890" class="text-white ms-3"><i class="bi bi-telephone"></i> Phone</a>
+        <a href="mailto:youremail@example.com" class="text-white ms-3"><i class="bi bi-envelope"></i> Email</a>
+    </div>
+    <div class="mt-2 small">&copy; 2024 Heart Attack Risk Calculator. All rights reserved.</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+</script>
+</body>
+</html>
